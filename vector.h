@@ -6,7 +6,7 @@ public:
 template <typename T>
 class Vector {
 private:
-	int sz, cpct;
+	unsigned int sz, cpct;
 	T* elem;
 	Allocator<T> allocator;
 public:
@@ -135,7 +135,7 @@ public:
 		else {throw std::out_of_range("Out of scope");}
 	}
 	reference front(){return elem[0];}
-	reference back(){return elem[size-1];}
+	reference back(){return elem[sz-1];}
 	pointer data(){return elem;}
 	iterator begin(){
 		iterator it;
@@ -144,7 +144,9 @@ public:
 	}
 	iterator end(){
 		iterator it;
-		it.setPointer(&elem[sz]);
+		if(sz == 0){it.setPointer(&elem[0]);}
+		else {it.setPointer(&elem[sz-1]);}
+		
 		return it;
 	}
 	const_iterator cbegin(){
@@ -154,12 +156,14 @@ public:
 	}
 	const_iterator cend(){
 		const_iterator it;
-		it.setPointer(&elem[sz-1]);
+		if(sz == 0){it.setPointer(&elem[0]);}
+		else {it.setPointer(&elem[sz-1]);}
 		return it;
 	}
 	reverse_iterator rbegin(){
 		reverse_iterator it;
-		it.setPointer(&elem[sz-1]);
+		if(sz == 0){it.setPointer(&elem[sz - 1]);}
+		else {it.setPointer(&elem[0]);}
 		return it;
 	}
 	reverse_iterator rend(){
@@ -169,7 +173,8 @@ public:
 	}
 	const_reverse_iterator crbegin(){
 		const_reverse_iterator it;
-		it.setPointer(&elem[sz-1]);
+		if(sz == 0){it.setPointer(&elem[sz - 1]);}
+		else {it.setPointer(&elem[0]);}
 		return it;
 	}
 	const_reverse_iterator crend(){
@@ -177,8 +182,8 @@ public:
 		it.setPointer(&elem[0]);
 		return it;
 	}
-	bool empty() const{
-		return (begin() == end() + 1);
+	bool empty() {
+		return (begin() == end());
 	}
 	size_type size() const{return sz;}
 	size_type max_size() const{
@@ -327,4 +332,5 @@ public:
 	friend bool operator >(Vector& v, Vector& t){return !(v < t);}
 	friend bool operator >=(Vector& v, Vector& t){if (v == t){return true;}else {return !(v < t);}}
 };
+
 
