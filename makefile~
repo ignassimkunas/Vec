@@ -1,0 +1,6 @@
+main: fun.o
+	g++ -std=c++11 -O3 -o main Vector.cpp
+fun:
+	g++ -c fun.cpp
+clean:
+	rm *.o main

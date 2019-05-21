@@ -31,7 +31,7 @@ public:
 	//destructor
 	~Vector(){delete[] elem;}
 	//iterator class
-	class Iterator{
+	class Iterator : public std::iterator<std::random_access_iterator_tag, T, std::ptrdiff_t, T*, T&>{
 	private:
 		pointer ptr;
 	public:
@@ -50,9 +50,8 @@ public:
 				++ptr;
 			return *this;
 		}
-		Iterator operator-(int val){
-			for (auto i = 0; i < val; ++i)
-				--ptr;
+		Iterator operator-(Iterator it){
+			ptr -= it;
 			return *this;
 		}
 		bool operator==(Iterator a){return a.ptr == ptr;}
