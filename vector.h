@@ -50,8 +50,9 @@ public:
 				++ptr;
 			return *this;
 		}
-		Iterator operator-(Iterator it){
-			ptr -= it;
+		Iterator operator-(int val){
+			for (auto i = 0; i < val; ++i)
+				--ptr;
 			return *this;
 		}
 		bool operator==(Iterator a){return a.ptr == ptr;}
