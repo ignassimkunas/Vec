@@ -1,5 +1,5 @@
 # Vector
-Custom Vector
+Custom std::vector class.
 
 
 # Pavyzdžiai:
@@ -171,12 +171,4 @@ Vector užpildymo laikas su 100000000 int elementų.0.355825
 ```
 std::vector atminties perskirstymai: 27
 Vector atminties perskirstymai: 27
-```
-# Laiko matavimas su 3 užduotimi
-
-```
-Studentų custom vektoriaus rūšiavimas ir išvedimas į failus truko: 0.415608
-```
-```
-Studentų std vektoriaus rūšiavimas ir išvedimas į failus truko: 0.434111
 ```
