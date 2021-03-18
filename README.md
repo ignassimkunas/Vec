@@ -138,37 +138,37 @@ Vector<int> v1;
   50
 ```
 
-# Laiko matavimas
+# Time calculations:
 
-- 10000 elementų:
+- 10000 elements:
 ```
 std::vector užpildymo laikas su 10000 int elementų.0.000252229
 Vector užpildymo laikas su 10000 int elementų.0.000167087
 ```
 
-- 100000 elementų:
+- 100000 elements:
 ```
 std::vector užpildymo laikas su 100000 int elementų.0.00210143
 Vector užpildymo laikas su 100000 int elementų.0.00130014
 ```
-- 1000000 elementų:
+- 1000000 elements:
 ```
 std::vector užpildymo laikas su 1000000 int elementų.0.0172255
 Vector užpildymo laikas su 1000000 int elementų.0.0114977
 ```
-- 10000000 elementų:
+- 10000000 elements:
 ```
 std::vector užpildymo laikas su 10000000 int elementų.0.0685323
 Vector užpildymo laikas su 10000000 int elementų.0.0454282
 ```
-- 100000000 elementų:
+- 100000000 elements:
 ```
 std::vector užpildymo laikas su 100000000 int elementų.0.486892
 Vector užpildymo laikas su 100000000 int elementų.0.355825
 ```
-# Atminties perskirstymai
+# Memory distributions
 
 ```
-std::vector atminties perskirstymai: 27
-Vector atminties perskirstymai: 27
+std::vector memory distributions: 27
+Vector memory distributions: 27
 ```
