@@ -1,8 +1,8 @@
 # Vector
-Custom std::vector class.
+Custom std::vector class in C++.
 
 
-# Pavyzdžiai:
+# Method examples:
 
 - erase:
 
